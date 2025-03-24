@@ -1,4 +1,6 @@
-public class s34812 {
+package exercises;
+
+public class ex3 {
     public static void main(String[] args) {
         boolean var = true;
         var = false;
