@@ -1,8 +1,10 @@
-public class s34812 {
+package exercises;
+
+public class ex43 {
     public static void main(String[] args) {
         // simplify (!(a < b) && !(a > b))
 
-        int a = 1;
+        int a = 2;
         int b = 2;
 
         if (a == b) {
