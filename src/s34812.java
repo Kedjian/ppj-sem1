@@ -2,23 +2,46 @@ import java.util.Scanner;
 
 public class s34812 {
     public static void main(String[] args) {
-        int[] variablesex62 = new int[10];
+        double[] varArray = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
-        for (int i = 0; i < variablesex62.length; i++) {
-            double randomNumber = Math.random() < 0.5 ? 0 : 1;
-            variablesex62[i] = (int) randomNumber;
+        int max = 10;
+        int min = 1;
+        int range = max - min + 1;
+
+        for (int i = 0; i < varArray.length; i++) {
+            double rand = (Math.random() * range) + min;
+            varArray[i] = rand;
         }
 
-        int zeroAmount = 0;
-        int oneAmount = 0;
+        System.out.println(" ");
 
-        for (int variable : variablesex62) {
-            if (variable == 0) {
-                zeroAmount++;
+        for (double v : varArray) {
+            System.out.print(v + " ");
+        }
+
+        System.out.println(" ");
+
+        for (int i = 0; i < varArray.length; i++) {
+            if (checkIfEven(i)) {
+                System.out.print(varArray[i] + " ");
             } else {
-                oneAmount++;
+                System.out.print("");
             }
-            System.out.print(" " + variable);
         }
+
+        System.out.println(" ");
+
+        for (double v : varArray) {
+            int iteratedNum = (int) v;
+            if (!checkIfEven(iteratedNum)) {
+                System.out.print(iteratedNum + " ");
+            } else {
+                System.out.print("");
+            }
+        }
+    }
+
+    public static boolean checkIfEven(double number) {
+        return number % 2 == 0;
     }
 }
